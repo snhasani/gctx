@@ -1,0 +1,8 @@
+pre-commit:
+  jobs:
+    - name: format-check
+      run: cargo fmt --check
+    - name: lint
+      run: cargo clippy --all-targets -- -D warnings
+    - name: test
+      run: cargo test
